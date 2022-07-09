@@ -39,7 +39,7 @@ app.MapPost("/SelectAllColumnsOfUser", async (IUserRepository userRepository) =>
     return Results.Ok(result);
 });
 
-app.MapPost("/SelectCustomColumnsOfUserAsync", async (IUserRepository userRepository, string[] columnNames) =>
+app.MapPost("/SelectCustomColumnsOfUserAsync", async (IUserRepository userRepository, string[]? columnNames) =>
 {
     var result = await userRepository.SelectCustomColumnsOfUserAsync(columnNames);
 
